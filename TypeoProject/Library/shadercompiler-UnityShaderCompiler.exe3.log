@@ -1,0 +1,6 @@
+Base path: 'F:/Unity Things/2019.3.0f6/Editor/Data', plugins path 'F:/Unity Things/2019.3.0f6/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=2343 outsize=1334 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1526 outsize=368 ok=1
