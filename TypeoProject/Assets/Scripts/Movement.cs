@@ -9,42 +9,23 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A)) 
         {
-            Move("left");
+            Move(new Vector2Int(-1, 0), GridConstructor.PlayerPosition);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            Move("right");
+            Move(new Vector2Int(1, 0), GridConstructor.PlayerPosition);
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
-            Move("up");
+            Move(new Vector2Int(0, 1), GridConstructor.PlayerPosition);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            Move("down");
+            Move(new Vector2Int(0, -1), GridConstructor.PlayerPosition);
         }
     }
 
-    private void Move(string direction) 
-    {
-        switch (direction) 
-        {
-            case "up":
-                SetMove(new Vector2Int(0, 1), GridConstructor.PlayerPosition);
-                break;
-            case "down":
-                SetMove(new Vector2Int(0, -1), GridConstructor.PlayerPosition);
-                break;
-            case "left":
-                SetMove(new Vector2Int(-1, 0), GridConstructor.PlayerPosition);
-                break;
-            case "right":
-                SetMove(new Vector2Int(1, 0), GridConstructor.PlayerPosition);
-                break;
-        }
-    }
-
-    private void SetMove(Vector2Int nextPos, Vector2Int currentPos) 
+    private void Move(Vector2Int nextPos, Vector2Int currentPos) 
     {
         if (currentPos.x + nextPos.x >= 0 && currentPos.x + nextPos.x < GridConstructor.accessWidth && currentPos.y + nextPos.y >= 0 && currentPos.y + nextPos.y < GridConstructor.accessHeight) 
         {
@@ -71,7 +52,7 @@ public class Movement : MonoBehaviour
             else if (GridConstructor.Matrix[nextPos.x + currentPos.x, nextPos.y + currentPos.y] == (int)GridConstructor.Cells.Item && GridConstructor.Matrix[nextPos.x + nextPos.x * 1 + currentPos.x, nextPos.y + nextPos.y * 1 + currentPos.y] != (int) GridConstructor.Cells.Wall)
             {
                 MoveItem(nextPos, nextPos + currentPos);
-                SetMove(nextPos, currentPos);
+                Move(nextPos, currentPos);
             }
             if (GridConstructor.Matrix[nextPos.x + currentPos.x, nextPos.y + currentPos.y] == (int)GridConstructor.Cells.Point)
             {
