@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221799080}
   - component: {fileID: 221799081}
+  - component: {fileID: 221799082}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -172,7 +173,21 @@ MonoBehaviour:
   Point: {fileID: 1401198763941756732, guid: 824be0aadd37b0f46b532f251ffcd1bf, type: 3}
   OnPoint: {fileID: 918581215046113970, guid: b246faaad12618645aa89ab827b781a2, type: 3}
   Item: {fileID: 7324210156732870269, guid: 04113d2c50d287141bcd564005ba2283, type: 3}
-  _bones: 011111111013130501112111001105010401100553531100300501111111301000001111
+  PlayerOnPoint: {fileID: 7347342409037667215, guid: 2ae66ef8648f7514d998e9e1b9574c9b,
+    type: 3}
+  _bones: 000111111000100001111100501120000031100000001111100001000100001000111111
+--- !u!114 &221799082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221799079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06101a6c15e647b4b879b9c875289ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

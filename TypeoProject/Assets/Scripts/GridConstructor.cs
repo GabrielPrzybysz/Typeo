@@ -8,7 +8,12 @@ public class GridConstructor : MonoBehaviour
     public int Width;
     public int Height;
 
+    public static int accessWidth;
+    public static int accessHeight;
+
     public static int[,] Matrix;
+    public static Vector2Int PlayerPosition;
+
 
     public enum Cells 
     {
@@ -17,7 +22,8 @@ public class GridConstructor : MonoBehaviour
         Player = 2,
         Point = 3,
         OnPoint = 4,
-        Item = 5
+        Item = 5,
+        PlayerOnPoint = 6
     }
 
 
@@ -27,6 +33,7 @@ public class GridConstructor : MonoBehaviour
     public GameObject Point;
     public GameObject OnPoint;
     public GameObject Item;
+    public GameObject PlayerOnPoint;
 
     [SerializeField]
     private string _bones;
@@ -38,6 +45,9 @@ public class GridConstructor : MonoBehaviour
     {
         Matrix = new int[Width, Height];
 
+        accessHeight = Height;
+        accessWidth = Width;
+
         int boneIndex = 0;
 
         for (int x = 0; x < Width; x++) 
@@ -45,6 +55,12 @@ public class GridConstructor : MonoBehaviour
             for (int y = 0; y < Height; y++) 
             {
                 Matrix[x, y] = (int) char.GetNumericValue(_bones, boneIndex);
+
+                if ((int) char.GetNumericValue(_bones, boneIndex) == (int) Cells.Player) 
+                {
+                    PlayerPosition = new Vector2Int(x, y);
+                }
+
                 boneIndex++;
             }
         }
@@ -95,6 +111,10 @@ public class GridConstructor : MonoBehaviour
                 if (Matrix[x, y] == (int)Cells.Item)
                 {
                     Instantiate(Item, new Vector2(x, y), transform.rotation, _grid.transform);
+                }
+                if (Matrix[x, y] == (int) Cells.PlayerOnPoint)
+                {
+                    Instantiate(PlayerOnPoint, new Vector2(x, y), transform.rotation, _grid.transform);
                 }
             }
         }
