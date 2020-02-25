@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4127732537676741750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4127732537676741753}
+  - component: {fileID: 4127732537676741752}
+  - component: {fileID: 4127732537676741755}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4127732537676741753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127732537676741750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0939038, y: -0.29781312, z: -0.19335938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4127732537676741752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127732537676741750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97144becc19f7fb4c8bae4641a594fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 8
+  Height: 9
+  Free: {fileID: 3201078221303058017, guid: fe2b44bf93778584b8dde17dd274e95f, type: 3}
+  Wall: {fileID: 584856910733580388, guid: ff502ac868e57834e840c25c2f4a2225, type: 3}
+  Player: {fileID: 4710604947241464205, guid: e5633971bdc541a41b11d198134b3ee7, type: 3}
+  Point: {fileID: 1401198763941756732, guid: 824be0aadd37b0f46b532f251ffcd1bf, type: 3}
+  OnPoint: {fileID: 918581215046113970, guid: b246faaad12618645aa89ab827b781a2, type: 3}
+  Item: {fileID: 7324210156732870269, guid: 04113d2c50d287141bcd564005ba2283, type: 3}
+  PlayerOnPoint: {fileID: 7347342409037667215, guid: 2ae66ef8648f7514d998e9e1b9574c9b,
+    type: 3}
+  _bones: 000111111000100001111100501120000031100000001111100001000100001000111111
+--- !u!114 &4127732537676741755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127732537676741750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06101a6c15e647b4b879b9c875289ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
