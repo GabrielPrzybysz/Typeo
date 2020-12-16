@@ -12,7 +12,7 @@
 <br>
 
 
-## ✅&nbsp; Game Objective
+## ✅&nbsp; Game Goal
 
 
 <p>Your objective is to carry the bug to the computer (like a hacker) but is very easy to make the bug be stuck , so, careful</p>
